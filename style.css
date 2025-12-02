@@ -1,0 +1,183 @@
+/* Estils generals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2a2a2a 0, #050505 55%, #000 100%);
+  color: #f5f5f5;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Boira / fum de fons */
+.fons-boira {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 0%, #ffffff11 0, transparent 40%),
+    radial-gradient(circle at 80% 20%, #ffffff18 0, transparent 45%),
+    radial-gradient(circle at 50% 100%, #ff00000f 0, transparent 50%);
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  animation: boira 20s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes boira {
+  from {
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    transform: translate3d(20px, -10px, 0);
+  }
+}
+
+/* Capçalera */
+.capcalera {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.titol {
+  font-family: "Creepster", system-ui;
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  letter-spacing: 0.12em;
+  color: #ff3b3b;
+  text-shadow: 0 0 8px #ff0000aa, 0 0 20px #ff000055;
+  animation: flicker 3s infinite;
+}
+
+.subtitol {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #dddddd;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.85;
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #ff0000aa, 0 0 20px #ff000055;
+  }
+  20%,
+  55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+/* Contenidor principal */
+.contenidor {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Secció introducció */
+.intro {
+  background: #111111dd;
+  border: 1px solid #ff3b3b44;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px #000000aa;
+}
+
+.intro p {
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+/* Llistat d'alumnes */
+.llistat h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #ff7373;
+}
+
+.llista-alumnes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.alumne-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #151515dd;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ffffff18;
+  box-shadow: 0 0 10px #000000aa;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.alumne-item:hover {
+  transform: translateX(6px);
+  border-color: #ff3b3baa;
+  box-shadow: 0 0 18px #ff000044;
+  background: #1a0606dd;
+}
+
+.icono {
+  font-size: 1.2rem;
+  color: #ff3b3b;
+}
+
+.alumne-item a {
+  text-decoration: none;
+  color: #f8f8f8;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.alumne-item a:hover {
+  text-decoration: underline;
+}
+
+/* Peu de pàgina */
+.peu {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  opacity: 0.8;
+}
+
+/* Responsive bàsic per mòbil */
+@media (max-width: 600px) {
+  .capcalera {
+    padding-top: 2.5rem;
+  }
+
+  .intro {
+    padding: 1.2rem;
+  }
+
+  .alumne-item {
+    padding: 0.5rem 0.8rem;
+  }
+}

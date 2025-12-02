@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Concurs Nadal Zombie</title>
+
+    <!-- Font “terrorífica” de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="fons-boira"></div>
+
+    <header class="capcalera">
+      <h1 class="titol">Concurs Nadal Zombie</h1>
+      <p class="subtitol">
+        Les felicitacions nadalenques més terrorífiques dels alumnes
+      </p>
+    </header>
+
+    <main class="contenidor">
+      <section class="intro">
+        <p>
+          Benvinguts i benvingudes al <strong>Concurs Nadal Zombie</strong>.
+          Aquí trobareu els enllaços a les webs creades per l'alumnat.
+          Entreu sota la vostra responsabilitat: alguns projectes poden
+          provocar esgarrifances, crits o atacs de riure nerviós.
+        </p>
+      </section>
+
+      <section class="llistat">
+        <h2>Llistat de participacions</h2>
+        <ul class="llista-alumnes">
+          <!--
+            ✏️ EXEMPLE:
+            Canvia el NOM ALUMNE i la URL per cada participant.
+            Duplica <li> tants cops com calgui.
+          -->
+          <li class="alumne-item">
+            <span class="icono">☠</span>
+            <a href="https://exemple.com/alumne1" target="_blank">
+              Nom Alumne 1
+            </a>
+          </li>
+
+          <li class="alumne-item">
+            <span class="icono">☠</span>
+            <a href="https://exemple.com/alumne2" target="_blank">
+              Nom Alumne 2
+            </a>
+          </li>
+
+          <li class="alumne-item">
+            <span class="icono">☠</span>
+            <a href="https://exemple.com/alumne3" target="_blank">
+              Nom Alumne 3
+            </a>
+          </li>
+
+          <!-- A partir d’aquí afegeix més línies per a cada alumne -->
+        </ul>
+      </section>
+
+      <footer class="peu">
+        <p>
+          &copy; <span id="any"></span> Concurs Nadal Zombie · Institut Pla de
+          l’Estany
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      // Escriu automàticament l’any actual al peu de pàgina
+      document.getElementById("any").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
